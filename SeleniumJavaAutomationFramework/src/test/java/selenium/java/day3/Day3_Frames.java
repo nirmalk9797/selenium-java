@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.Select;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -15,14 +16,16 @@ public class Day3_Frames {
 
 	public static void main(String[] args) {
 		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		WebDriver driver = null;
+		
 		ChromeOptions cOptions = new ChromeOptions();
 		cOptions.addArguments("--incognito");
 		cOptions.addArguments("--start-maximized");
-			
-		driver.manage().window().maximize();
 		
+		DesiredCapabilities caps = new DesiredCapabilities();
+		cOptions.merge(caps);
+		driver = new ChromeDriver(cOptions);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.get("https://letcode.in/frame");
 				
 //		Actions scroll = new Actions(driver);
