@@ -70,7 +70,7 @@ public class Day1_Dropdowns {
 		
 		
 		System.out.println("\nBootstrap Dropdowns\n");
-		
+		driver.get("https://www.lambdatest.com/selenium-playground/jquery-dropdown-search-demo");
 		
 		driver.close();
 	}
