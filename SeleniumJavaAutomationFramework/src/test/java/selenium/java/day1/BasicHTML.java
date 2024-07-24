@@ -10,7 +10,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 	
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Day1_BasicHTML {
+public class BasicHTML {
 
 	public static void main(String[] args) throws InterruptedException {
 		WebDriverManager.chromedriver().setup();
