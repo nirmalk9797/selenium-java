@@ -31,7 +31,6 @@ public class DatePickerFunctions {
 				date.click();
 				break;
 			}
-
 		}
 	}
 
@@ -48,6 +47,7 @@ public class DatePickerFunctions {
 
 		selectMonthAndYear(driver, "July", "2025");
 		selectDate(driver, "29");
+		driver.close();
 	}
 
 }
