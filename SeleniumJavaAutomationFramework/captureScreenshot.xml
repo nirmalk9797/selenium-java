@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" thread-count="2" parallel="methods">
+	<listeners>
+		<listener class-name="testng.day2.ITestListenerClass" />
+	</listeners>
+	<test name="Test1">
+		<classes>
+			<class name="testng.day2.CaptureScreenshots">
+				<methods>
+					<include name="TestGoogle" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="Test2">
+		<classes>
+			<class name="testng.day2.CaptureScreenshots">
+				<methods>
+					<include name="TestFacebook" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="Test3">
+		<classes>
+			<class name="testng.day2.CaptureScreenshots">
+				<methods>
+					<include name="TestOrangeHRM" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
